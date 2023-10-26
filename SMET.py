@@ -18,10 +18,10 @@ nlp = NLP()
 nlp.load_model('dep')
 nlp.load_model('sentencizer')
 
-LR_model = pickle.load(open("LR_ATT&CK_model.pkl", 'rb'))
+LR_model = pickle.load(open("LR_ATT&CK_model_V2.pkl", 'rb'))
 emb_model = SentenceTransformer("basel/ATTACK-BERT")
 id2mitre = funs.read_json_as_dict('id2mitre.json')
-id2label = funs.read_json_as_dict('id2ATT&CK.json')
+id2label = funs.read_json_as_dict('id2ATT&CK_V2.json')
 id2label = {int(i):id2label[i] for i in id2label}
 
 def get_verbs_tag(srl):

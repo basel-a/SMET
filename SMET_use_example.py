@@ -33,8 +33,24 @@ mapping = map_text(cve,CVE = False)
 from sentence_transformers import SentenceTransformer
 
 text = ""
+
 emb_model = SentenceTransformer("basel/ATTACK-BERT")
 embedding = emb_model.encode(text)
+
+
+######
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer('basel/ATTACK-BERT')
+
+sentences = ["the account has weak password", "attacker gain an initial access to the machine"]
+
+embeddings = model.encode(sentences)
+
+from sklearn.metrics.pairwise import cosine_similarity
+print(cosine_similarity([embeddings[0]], [embeddings[1]]))
+
+
 
 
 
