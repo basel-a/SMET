@@ -88,7 +88,7 @@ def get_AVs(text,CVE = False):
         
         cve_vos_filtered = { key:vo0.get(key,[])+vo1.get(key,[])+vo2.get(key,[]) for key in set(list(vo0.keys())+list(vo1.keys())+list(vo2.keys())) }
         cve_vos = set([i[0] for j in cve_vos_filtered.values() for i in j ])
-        cve_vos.append(text)
+        cve_vos.add(text)
 
         
     else:
