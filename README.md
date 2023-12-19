@@ -8,6 +8,6 @@ Check SMET_use_example.py to learn how to integrate SMET in your code
 ATT&CK BERT for semantically meaningful cybersecurity text embedding: https://huggingface.co/basel/ATTACK-BERT
 
 ### Install requirements 
-(Developed using Python 3.8.18, other versions should work too.)
-pip install -r requirements.txt
-python -m spacy download en_core_web_lg
+(Developed using Python 3.8.18, other versions should work too.) <br>
+pip install -r requirements.txt <br>
+python -m spacy download en_core_web_lg <br>
